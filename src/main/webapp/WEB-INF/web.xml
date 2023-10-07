@@ -20,6 +20,18 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>Controllers.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ForgotPassword</servlet-name>
+        <servlet-class>ForgotPassword.ForgotPassword</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OTP</servlet-name>
+        <servlet-class>ForgotPassword.OTP</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ResetPassword</servlet-name>
+        <servlet-class>ForgotPassword.ResetPassword</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AccountController</servlet-name>
         <url-pattern>/Account/*</url-pattern>
@@ -40,8 +52,18 @@
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login/*</url-pattern>
     </servlet-mapping>
-      
-      
+    <servlet-mapping>
+        <servlet-name>ForgotPassword</servlet-name>
+        <url-pattern>/ForgotPassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OTP</servlet-name>
+        <url-pattern>/OTP</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResetPassword</servlet-name>
+        <url-pattern>/ResetPassword</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -62,6 +62,10 @@ public class LoginController extends HttpServlet {
         String path = request.getRequestURI();
         if (path.endsWith("/Login")) {
             request.getRequestDispatcher("/Login.jsp").forward(request, response);
+        }else if(path.endsWith("/Login/OTP")){
+            request.getRequestDispatcher("/OTP.jsp").forward(request, response);
+        }else if(path.endsWith("/Login/Reset")){
+             request.getRequestDispatcher("/ResetPassword.jsp").forward(request, response);
         }
     }
 
@@ -76,8 +80,12 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession checksession = request.getSession();
+        checksession.getAttribute("ExistReset");
+      
        if(request.getParameter("btnLogin") != null){
            try {
+               checksession.removeAttribute("ExistReset");
                String us = request.getParameter("username");
                String ps = request.getParameter("password");
                tblUser acc = new tblUser(us, ps);

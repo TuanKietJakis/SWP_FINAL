@@ -16,7 +16,7 @@ public class tblUser {
     String FullName;
     String Gender;
     String DOB;
-    int PhoneNumber;
+    String PhoneNumber;
     int RoleID;
     byte Active;
 
@@ -81,13 +81,6 @@ public class tblUser {
         this.DOB = DOB;
     }
 
-    public int getPhoneNumber() {
-        return PhoneNumber;
-    }
-
-    public void setPhoneNumber(int PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
-    }
 
     public int getRoleID() {
         return RoleID;
@@ -105,7 +98,7 @@ public class tblUser {
         this.Active = Active;
     }
 
-    public tblUser(int UserID, String UserName, String Password, String Email, String FullName, String Gender, String DOB, int PhoneNumber, int RoleID, byte Active) {
+    public tblUser(int UserID, String UserName, String Password, String Email, String FullName, String Gender, String DOB, String PhoneNumber, int RoleID, byte Active) {
         this.UserID = UserID;
         this.UserName = UserName;
         this.Password = Password;
